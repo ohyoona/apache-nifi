@@ -1,12 +1,12 @@
 {
   "externalControllerServices" : {
-    "07be00a4-8d10-377e-9109-7f3393f7b168" : {
-      "identifier" : "07be00a4-8d10-377e-9109-7f3393f7b168",
-      "name" : "AvroReader"
-    },
     "c878f56c-bdeb-3206-9120-d27b17cca9a5" : {
       "identifier" : "c878f56c-bdeb-3206-9120-d27b17cca9a5",
       "name" : "JsonTreeReader"
+    },
+    "07be00a4-8d10-377e-9109-7f3393f7b168" : {
+      "identifier" : "07be00a4-8d10-377e-9109-7f3393f7b168",
+      "name" : "AvroReader"
     },
     "a206dae2-9e71-3844-80b1-d2feace909dc" : {
       "identifier" : "a206dae2-9e71-3844-80b1-d2feace909dc",
@@ -36,6 +36,126 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "df6811c2-019b-1000-1804-7af87d5fe437",
+        "name" : "더존 자동전표데이터생성 구조로 변환",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0bf963c9-34d7-32c5-9eb2-71c68193db42",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df321980-019b-1000-0f42-d1b70b022ca8",
+        "name" : "ExecuteScript",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 54
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df32197e-019b-1000-c892-fc5ae1796a99",
+        "name" : "더존 코드 매핑 목록 조회",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "16566ee8-57dc-319b-8be5-e6f6ce84dba8",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df73eeff-019b-1000-117a-3f490be0ec65",
+        "name" : "더존 JSON 필드 정의",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 56
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df321982-019b-1000-9d67-67aead2be28f",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2c57d11f-c2f9-3b41-8ecf-65f3c9ad8a5b",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df73eeff-019b-1000-117a-3f490be0ec65",
+        "name" : "더존 JSON 필드 정의",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 57
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df747b3c-019b-1000-bfd5-526527342c77",
+        "name" : "LogAttribute",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d936d429-2650-30d2-aa0f-37f8e43b8c08",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df6811c2-019b-1000-1804-7af87d5fe437",
+        "name" : "더존 자동전표데이터생성 구조로 변환",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 58
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "df321977-019b-1000-1e0c-51736e7a6091",
         "name" : "ExecuteScript",
         "type" : "PROCESSOR"
@@ -58,36 +178,6 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 38
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "df321976-019b-1000-f29c-ba4ff8964048",
-        "name" : "더존 JSON 필드 정의",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df321991-019b-1000-785e-6a64324664de",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "split" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "df321985-019b-1000-0622-8c1f570b0af8",
-        "name" : "SplitJson",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 23
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -178,36 +268,6 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 52
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "df32197e-019b-1000-c892-fc5ae1796a99",
-        "name" : "더존 코드 매핑 목록 조회",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df321995-019b-1000-073d-ff699dc966a2",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "matched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "df321976-019b-1000-f29c-ba4ff8964048",
-        "name" : "더존 JSON 필드 정의",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 24
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
       "backPressureObjectThreshold" : 10000,
@@ -366,36 +426,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "df321982-019b-1000-9d67-67aead2be28f",
-        "name" : "LogAttribute",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df32199b-019b-1000-09c8-7af2ca711fce",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "matched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "df321976-019b-1000-f29c-ba4ff8964048",
-        "name" : "더존 JSON 필드 정의",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 26
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "df321978-019b-1000-1489-9910bab66970",
         "name" : "LogAttribute",
         "type" : "PROCESSOR"
@@ -448,6 +478,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 47
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df73eeff-019b-1000-117a-3f490be0ec65",
+        "name" : "더존 JSON 필드 정의",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "e8e7a7c9-aacf-3295-874e-5aa5a7c2c5fd",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "split" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "df321985-019b-1000-0622-8c1f570b0af8",
+        "name" : "SplitJson",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 55
     } ],
     "controllerServices" : [ ],
     "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -455,13 +515,13 @@
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
     "externalControllerServiceReferences" : {
-      "07be00a4-8d10-377e-9109-7f3393f7b168" : {
-        "identifier" : "07be00a4-8d10-377e-9109-7f3393f7b168",
-        "name" : "AvroReader"
-      },
       "c878f56c-bdeb-3206-9120-d27b17cca9a5" : {
         "identifier" : "c878f56c-bdeb-3206-9120-d27b17cca9a5",
         "name" : "JsonTreeReader"
+      },
+      "07be00a4-8d10-377e-9109-7f3393f7b168" : {
+        "identifier" : "07be00a4-8d10-377e-9109-7f3393f7b168",
+        "name" : "AvroReader"
       },
       "a206dae2-9e71-3844-80b1-d2feace909dc" : {
         "identifier" : "a206dae2-9e71-3844-80b1-d2feace909dc",
@@ -487,177 +547,6 @@
     },
     "processGroups" : [ ],
     "processors" : [ {
-      "autoTerminatedRelationships" : [ "failure", "unmatched" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.7.2"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df321976-019b-1000-f29c-ba4ff8964048",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "더존 JSON 필드 정의",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -328.00002274454596,
-        "y" : 59.99999952016242
-      },
-      "properties" : {
-        "Destination" : "flowfile-attribute",
-        "coCd" : "$.coCd",
-        "Max String Length" : "20 MB",
-        "Return Type" : "auto-detect",
-        "drcrFg" : "$.drcrFg",
-        "trCd" : "$.trCd",
-        "Null Value Representation" : "empty string",
-        "trNm" : "$.trNm",
-        "menuDt" : "$.menuDt",
-        "docuTy" : "$.docuTy",
-        "menu_LnSq" : "$.menu_LnSq",
-        "Path Not Found Behavior" : "ignore",
-        "acctCd" : "$.acctCd",
-        "rmkDc" : "$.rmkDc",
-        "acctAm" : "$.acctAm",
-        "inDivCd" : "$.coCd",
-        "menusq" : "$.menusq"
-      },
-      "propertyDescriptors" : {
-        "Destination" : {
-          "displayName" : "Destination",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Destination",
-          "sensitive" : false
-        },
-        "coCd" : {
-          "displayName" : "coCd",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "coCd",
-          "sensitive" : false
-        },
-        "Max String Length" : {
-          "displayName" : "Max String Length",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Max String Length",
-          "sensitive" : false
-        },
-        "Return Type" : {
-          "displayName" : "Return Type",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Return Type",
-          "sensitive" : false
-        },
-        "drcrFg" : {
-          "displayName" : "drcrFg",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "drcrFg",
-          "sensitive" : false
-        },
-        "trCd" : {
-          "displayName" : "trCd",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "trCd",
-          "sensitive" : false
-        },
-        "Null Value Representation" : {
-          "displayName" : "Null Value Representation",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Null Value Representation",
-          "sensitive" : false
-        },
-        "trNm" : {
-          "displayName" : "trNm",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "trNm",
-          "sensitive" : false
-        },
-        "menuDt" : {
-          "displayName" : "menuDt",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "menuDt",
-          "sensitive" : false
-        },
-        "docuTy" : {
-          "displayName" : "docuTy",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "docuTy",
-          "sensitive" : false
-        },
-        "menu_LnSq" : {
-          "displayName" : "menu_LnSq",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "menu_LnSq",
-          "sensitive" : false
-        },
-        "Path Not Found Behavior" : {
-          "displayName" : "Path Not Found Behavior",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Path Not Found Behavior",
-          "sensitive" : false
-        },
-        "acctCd" : {
-          "displayName" : "acctCd",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "acctCd",
-          "sensitive" : false
-        },
-        "rmkDc" : {
-          "displayName" : "rmkDc",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "rmkDc",
-          "sensitive" : false
-        },
-        "acctAm" : {
-          "displayName" : "acctAm",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "acctAm",
-          "sensitive" : false
-        },
-        "inDivCd" : {
-          "displayName" : "inDivCd",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "inDivCd",
-          "sensitive" : false
-        },
-        "menusq" : {
-          "displayName" : "menusq",
-          "dynamic" : true,
-          "identifiesControllerService" : false,
-          "name" : "menusq",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -681,7 +570,7 @@
       },
       "properties" : {
         "Script Engine" : "Groovy",
-        "Script Body" : "import groovy.json.JsonSlurper\nimport groovy.json.JsonOutput\nimport org.apache.commons.io.IOUtils\nimport java.nio.charset.StandardCharsets\nimport org.apache.nifi.processor.io.StreamCallback\n\nflowFile = session.get()\nif (!flowFile) return\n\ndef data\n\nflowFile = session.write(flowFile, { inputStream, outputStream ->\n    def text = IOUtils.toString(inputStream, StandardCharsets.UTF_8)\n    data = new JsonSlurper().parseText(text)\n    \n    // data 가공\n    data.each { it.processed = true }\n    \n    def json = JsonOutput.toJson(data)\n    outputStream.write(json.getBytes(\"UTF-8\"))\n} as StreamCallback)\n\n// data를 JSON 문자열로 변환하여 attribute에 저장\nflowFile = session.putAttribute(flowFile, \"flowfile.a.data\", JsonOutput.toJson(data))\n\nsession.transfer(flowFile, REL_SUCCESS)"
+        "Script Body" : "import groovy.json.JsonSlurper\nimport groovy.json.JsonOutput\nimport org.apache.commons.io.IOUtils\nimport java.nio.charset.StandardCharsets\nimport org.apache.nifi.processor.io.StreamCallback\n\nflowFile = session.get()\nif (!flowFile) return\n\ndef data\n\nflowFile = session.write(flowFile, { inputStream, outputStream ->\n    def text = IOUtils.toString(inputStream, StandardCharsets.UTF_8)\n    data = new JsonSlurper().parseText(text)\n    \n    // data 가공\n    data.each { it.processed = true }\n    \n    def json = JsonOutput.toJson(data)\n    outputStream.write(json.getBytes(\"UTF-8\"))\n} as StreamCallback)\n\n// data를 JSON 문자열로 변환하여 attribute에 저장\nflowFile = session.putAttribute(flowFile, \"flowfile.winsabis.data\", JsonOutput.toJson(data))\n\nsession.transfer(flowFile, REL_SUCCESS)"
       },
       "propertyDescriptors" : {
         "Script File" : {
@@ -861,8 +750,8 @@
       "name" : "요청 데이터 존재여부 size 체크",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -776.000022744546,
-        "y" : -724.0000004798376
+        "x" : -816.0,
+        "y" : -728.0
       },
       "properties" : {
         "Destination" : "flowfile-attribute",
@@ -1344,7 +1233,7 @@
       "properties" : {
         "Set Auto Commit" : "true",
         "Max Wait Time" : "0 seconds",
-        "SQL Query" : "SELECT \n\t\tCOLUMN_ID AS \"columnId\",\n        COLUMN_CD1 AS \"columnCd1\",\n        EDI_CD1 AS \"ediCd1\"\n\t\tFROM  KR0001.B2_INTERFACE_CD_MP_TB\n\t\tWHERE CORP_ID = ${coCd}\n\t\t\tAND INTERFACE_ID = '*'\n\t\t\tAND USE_YN = 1\n\t\t\tAND (COLUMN_ID = 'DZ_ACCT_CD' AND COLUMN_CD1 = CAST('${acctCd}' AS VARCHAR(255))\n\t\t    OR  COLUMN_ID = 'DZ_TR_CD' AND COLUMN_CD1 = CAST('${trCd}' AS VARCHAR(255)) \n\t\t    OR COLUMN_ID = 'DZ_CO_CD' AND COLUMN_CD1 = CAST('${coCd}' AS VARCHAR(255)))",
+        "SQL Query" : "SELECT \n\t\tCOLUMN_ID AS \"columnId\",\n        COLUMN_CD1 AS \"columnCd1\",\n        EDI_CD1 AS \"ediCd1\"\n\t\tFROM  KR0001.B2_INTERFACE_CD_MP_TB\n\t\tWHERE CORP_ID = ${coCd} AND INTERFACE_ID = '*' AND USE_YN = 1\n\t\t\tAND (COLUMN_ID = 'DZ_ACCT_CD' AND COLUMN_CD1 = CAST('${acctCd}' AS VARCHAR(255))\n\t\t    OR  COLUMN_ID = 'DZ_TR_CD' AND COLUMN_CD1 = CAST('${trCd}' AS VARCHAR(255)) \n\t\t    OR COLUMN_ID = 'DZ_CO_CD' AND COLUMN_CD1 = CAST('${coCd}' AS VARCHAR(255)))",
         "Database Connection Pooling Service" : "a206dae2-9e71-3844-80b1-d2feace909dc",
         "Default Decimal Scale" : "0",
         "Fetch Size" : "0",
@@ -1491,8 +1380,8 @@
       "name" : "LogAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 775.999977255454,
-        "y" : 499.9999995201624
+        "x" : 752.0,
+        "y" : 496.0
       },
       "properties" : {
         "Log FlowFile Properties" : "true",
@@ -1603,12 +1492,12 @@
       "name" : "ExecuteScript",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -320.00002274454596,
-        "y" : 731.9999995201624
+        "x" : -328.0,
+        "y" : 720.0
       },
       "properties" : {
         "Script Engine" : "Groovy",
-        "Script Body" : "import com.fasterxml.jackson.databind.ObjectMapper\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport com.fasterxml.jackson.core.type.TypeReference;\nimport java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.nio.charset.StandardCharsets;\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.NoSuchElementException;\ndef flowFile = session.get()\nif (flowFile == null) return\n\ntry {\n    ObjectMapper mapper = new ObjectMapper()\n    \n    // 1. 원본 데이터 가져오기\n    String originalJsonA = flowFile.getAttribute(\"flowfile.a.data\")\n\tString originalJsonB = flowFile.getAttribute(\"flowfile.b.data\")\n    \n    // TypeReference 대신 List.class 사용\n    List<Map<String, Object>> originListMap = mapper.readValue(originalJsonA, List.class)\n    \n    log.info(\"원본 데이터: \" + originListMap)\n    \n    // 2. 매핑 코드 읽기\n    String mappingcode = \"\"\n    session.read(flowFile) { inputStream ->\n        mappingcode = inputStream.getText('UTF-8')\n    }\n    \n    // TypeReference 대신 List.class 사용\n    List<Map<String, Object>> codeListMap = mapper.readValue(originalJsonB, List.class)\n    \n    log.info(\"매핑 코드: \" + codeListMap)\n\n\tString dzCoCd = codeListMap.find {\n\t\tit.columnId == \"DZ_CO_CD\" && it.ediCd1 != \"\"\n\t}?.ediCd1\n\n\tString dzAcctCd = codeListMap.find {\n\t\tit.columnId == \"DZ_ACCT_CD\" && it.ediCd1 != \"\"\n\t}?.ediCd1\n\n\tString dzTrCd = codeListMap.find {\n\t\tit.columnId == \"DZ_TR_CD\" && it.ediCd1 != \"\"\n\t}?.ediCd1\n    \n    if (!dzCoCd) throw new Exception(\"not found dzCdCd 회사코드를 찾을 수 없습니다.\" + originListMap + codeListMap)\n    if (!dzAcctCd) throw new Exception(\"not found dzAcctCd 계정과목코드를 찾을 수 없습니다.\")\n    if (!dzTrCd) throw new Exception(\"not found dzTrCd 거래처코드를 찾을 수 없습니다.\")\n    \n    log.info(\"매핑 값: CO_CD=${dzCoCd}, ACCT_CD=${dzAcctCd}, TR_CD=${dzTrCd}\")\n    \n    // 4. 원본 데이터에 매핑 적용\n    List<Map<String, Object>> sendDouzoneMap = []\n    \n    originListMap.each { origin ->\n        origin.coCd = dzCoCd\n        origin.acctCd = dzAcctCd\n        origin.trCd = dzTrCd\n        sendDouzoneMap.add(origin)\n    }\n    \n    // 5. 결과 쓰기\n    flowFile = session.write(flowFile) { inputStream, outputStream ->\n        String result = mapper.writerWithDefaultPrettyPrinter()\n                             .writeValueAsString(sendDouzoneMap)\n        outputStream.write(result.getBytes('UTF-8'))\n    }\n    log.info(\"douzone code mapping success !!\")\n    session.transfer(flowFile, REL_SUCCESS)\n    \n} catch (Exception e) {\n    log.error(\"douzone code mapping fail !! : \" + e.message, e)\n    flowFile = session.putAttribute(flowFile, \"error.message\", e.message)\n    session.transfer(flowFile, REL_FAILURE)\n}"
+        "Script Body" : "import com.fasterxml.jackson.databind.ObjectMapper\nimport com.fasterxml.jackson.databind.ObjectMapper;\nimport com.fasterxml.jackson.core.type.TypeReference;\nimport java.io.BufferedReader;\nimport java.io.InputStreamReader;\nimport java.nio.charset.StandardCharsets;\nimport java.util.ArrayList;\nimport java.util.List;\nimport java.util.Map;\nimport java.util.NoSuchElementException;\ndef flowFile = session.get()\nif (flowFile == null) return\n\ntry {\n    ObjectMapper mapper = new ObjectMapper()\n    \n    // 1. 원본 데이터 가져오기\n    String originWinsabisDatas = flowFile.getAttribute(\"flowfile.winsabis.data\")\n\tString douzoneMappingCodes = flowFile.getAttribute(\"flowfile.mappingcode.data\")\n    \n    // TypeReference 대신 List.class 사용\n    List<Map<String, Object>> originListMap = mapper.readValue(originWinsabisDatas, List.class)\n    \n    log.info(\"원본 데이터: \" + originListMap)\n    \n    // 2. 매핑 코드 읽기\n    String mappingcode = \"\"\n    session.read(flowFile) { inputStream ->\n        mappingcode = inputStream.getText('UTF-8')\n    }\n    \n    // TypeReference 대신 List.class 사용\n    List<Map<String, Object>> codeListMap = mapper.readValue(douzoneMappingCodes, List.class)\n    \n    log.info(\"매핑 코드: \" + codeListMap)\n\n\tString dzCoCd = codeListMap.find {\n\t\tit.columnId == \"DZ_CO_CD\" && it.ediCd1 != \"\"\n\t}?.ediCd1\n\n\tString dzAcctCd = codeListMap.find {\n\t\tit.columnId == \"DZ_ACCT_CD\" && it.ediCd1 != \"\"\n\t}?.ediCd1\n\n\tString dzTrCd = codeListMap.find {\n\t\tit.columnId == \"DZ_TR_CD\" && it.ediCd1 != \"\"\n\t}?.ediCd1\n    \n    if (!dzCoCd) throw new Exception(\"not found dzCdCd 회사코드를 찾을 수 없습니다.\")\n    if (!dzAcctCd) throw new Exception(\"not found dzAcctCd 계정과목코드를 찾을 수 없습니다.\")\n    if (!dzTrCd) throw new Exception(\"not found dzTrCd 거래처코드를 찾을 수 없습니다.\")\n    \n    log.info(\"매핑 값: CO_CD=${dzCoCd}, ACCT_CD=${dzAcctCd}, TR_CD=${dzTrCd}\")\n    \n    // 4. 원본 데이터에 매핑 적용\n    List<Map<String, Object>> sendDouzoneMap = []\n    \n    originListMap.each { origin ->\n        origin.coCd = dzCoCd\n        origin.acctCd = dzAcctCd\n        origin.trCd = dzTrCd\n        sendDouzoneMap.add(origin)\n    }\n    \n    // 5. 결과 쓰기\n    flowFile = session.write(flowFile) { inputStream, outputStream ->\n        String result = mapper.writerWithDefaultPrettyPrinter()\n                             .writeValueAsString(sendDouzoneMap)\n        outputStream.write(result.getBytes('UTF-8'))\n    }\n    log.info(\"douzone code mapping success !!\")\n    session.transfer(flowFile, REL_SUCCESS)\n    \n} catch (Exception e) {\n    log.error(\"douzone code mapping fail !! : \" + e.message, e)\n    flowFile = session.putAttribute(flowFile, \"error.message\", e.message)\n    session.transfer(flowFile, REL_FAILURE)\n}"
       },
       "propertyDescriptors" : {
         "Script File" : {
@@ -1871,8 +1760,8 @@
       "name" : "데이터 속성 바인딩",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -304.00002274454596,
-        "y" : -516.0000004798376
+        "x" : -328.0,
+        "y" : -520.0
       },
       "properties" : {
         "Routing Strategy" : "Route to Property name",
@@ -1942,11 +1831,11 @@
         "Record Reader" : "c878f56c-bdeb-3206-9120-d27b17cca9a5",
         "HTTP Protocols" : "HTTP_1_1",
         "Authorized Subject DN Pattern" : ".*",
-        "Base Path" : "douzone/receive",
+        "Base Path" : "douzone/register/test",
         "Max Unconfirmed Flowfile Time" : "60 secs",
         "Return Code" : "200",
         "Record Writer" : "0d525872-05d4-34ba-938d-1cc38a76e000",
-        "Listening Port" : "7070",
+        "Listening Port" : "9999",
         "Client Authentication" : "AUTO"
       },
       "propertyDescriptors" : {
@@ -2165,8 +2054,8 @@
       "name" : "데이터 type, null 여부 체크 (Validation)",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -328.00002274454596,
-        "y" : -308.0000004798376
+        "x" : -328.0,
+        "y" : -328.0
       },
       "properties" : {
         "valid" : "  SELECT *\n  FROM FLOWFILE\n  WHERE coCd IS NOT NULL\n    AND coCd <> ''\n    AND menuDt IS NOT NULL\n    AND menuDt <> ''\n    AND menuSq IS NOT NULL\n    AND menu_LnSq IS NOT NULL\n    AND drcrFg IS NOT NULL\n    AND drcrFg IN ('1', '2', '3')\n    AND acctCd IS NOT NULL\n    AND acctCd <> ''\n    AND trCd IS NOT NULL\n\tAND trCd <> ''\n    AND trNm IS NOT NULL\n\tAND trNm <> ''\n    AND acctAm IS NOT NULL\n    AND docuTy IS NOT NULL\n\tAND docuTy <> ''\n\tAND rmkDc IS NOT NULL\n\tAND rmkDc <> ''",
@@ -2253,7 +2142,7 @@
       },
       "properties" : {
         "Script Engine" : "Groovy",
-        "Script Body" : "import groovy.json.JsonSlurper\nimport groovy.json.JsonOutput\nimport org.apache.commons.io.IOUtils\nimport java.nio.charset.StandardCharsets\nimport org.apache.nifi.processor.io.StreamCallback\n\nflowFile = session.get()\nif (!flowFile) return\n\ndef data\n\nflowFile = session.write(flowFile, { inputStream, outputStream ->\n    def text = IOUtils.toString(inputStream, StandardCharsets.UTF_8)\n    data = new JsonSlurper().parseText(text)\n    \n    // data 가공\n    data.each { it.processed = true }\n    \n    def json = JsonOutput.toJson(data)\n    outputStream.write(json.getBytes(\"UTF-8\"))\n} as StreamCallback)\n\n// data를 JSON 문자열로 변환하여 attribute에 저장\nflowFile = session.putAttribute(flowFile, \"flowfile.b.data\", JsonOutput.toJson(data))\n\nsession.transfer(flowFile, REL_SUCCESS)"
+        "Script Body" : "import groovy.json.JsonSlurper\nimport groovy.json.JsonOutput\nimport org.apache.commons.io.IOUtils\nimport java.nio.charset.StandardCharsets\nimport org.apache.nifi.processor.io.StreamCallback\n\nflowFile = session.get()\nif (!flowFile) return\n\ndef data\n\nflowFile = session.write(flowFile, { inputStream, outputStream ->\n    def text = IOUtils.toString(inputStream, StandardCharsets.UTF_8)\n    data = new JsonSlurper().parseText(text)\n    \n    // data 가공\n    data.each { it.processed = true }\n    \n    def json = JsonOutput.toJson(data)\n    outputStream.write(json.getBytes(\"UTF-8\"))\n} as StreamCallback)\n\n// data를 JSON 문자열로 변환하여 attribute에 저장\nflowFile = session.putAttribute(flowFile, \"flowfile.mappingcode.data\", JsonOutput.toJson(data))\n\nsession.transfer(flowFile, REL_SUCCESS)"
       },
       "propertyDescriptors" : {
         "Script File" : {
@@ -2551,8 +2440,8 @@
       "name" : "LogAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 247.99997725545404,
-        "y" : 811.9999995201624
+        "x" : 248.0,
+        "y" : 744.0
       },
       "properties" : {
         "Log FlowFile Properties" : "true",
@@ -2704,212 +2593,6 @@
       "type" : "org.apache.nifi.processors.standard.ConvertRecord",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ "failure", "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.7.2"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df32198c-019b-1000-2915-75d7326da288",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "PutFile",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 863.999977255454,
-        "y" : 59.99999952016242
-      },
-      "properties" : {
-        "Create Missing Directories" : "true",
-        "Directory" : "C:\\Users\\USER\\Desktop\\douzone-register-test",
-        "Conflict Resolution Strategy" : "replace"
-      },
-      "propertyDescriptors" : {
-        "Group" : {
-          "displayName" : "Group",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Group",
-          "sensitive" : false
-        },
-        "Owner" : {
-          "displayName" : "Owner",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Owner",
-          "sensitive" : false
-        },
-        "Create Missing Directories" : {
-          "displayName" : "Create Missing Directories",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Create Missing Directories",
-          "sensitive" : false
-        },
-        "Permissions" : {
-          "displayName" : "Permissions",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Permissions",
-          "sensitive" : false
-        },
-        "Maximum File Count" : {
-          "displayName" : "Maximum File Count",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Maximum File Count",
-          "sensitive" : false
-        },
-        "Last Modified Time" : {
-          "displayName" : "Last Modified Time",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Last Modified Time",
-          "sensitive" : false
-        },
-        "Directory" : {
-          "displayName" : "Directory",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Directory",
-          "sensitive" : false
-        },
-        "Conflict Resolution Strategy" : {
-          "displayName" : "Conflict Resolution Strategy",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Conflict Resolution Strategy",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.PutFile",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ "success" ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.7.2"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df32198d-019b-1000-e30f-4976ae70f5af",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "LogAttribute",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : 319.99997725545404,
-        "y" : -364.0000004798376
-      },
-      "properties" : {
-        "Log FlowFile Properties" : "true",
-        "Log Level" : "info",
-        "Attributes to Log" : "sql.query",
-        "Output Format" : "Line per Attribute",
-        "Log Payload" : "true",
-        "Character Set" : "UTF-8",
-        "Attributes to Log Regular Expression" : ".*"
-      },
-      "propertyDescriptors" : {
-        "Log FlowFile Properties" : {
-          "displayName" : "Log FlowFile Properties",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log FlowFile Properties",
-          "sensitive" : false
-        },
-        "Log Level" : {
-          "displayName" : "Log Level",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log Level",
-          "sensitive" : false
-        },
-        "Attributes to Ignore" : {
-          "displayName" : "Attributes to Ignore",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Ignore",
-          "sensitive" : false
-        },
-        "Attributes to Log" : {
-          "displayName" : "Attributes to Log",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Log",
-          "sensitive" : false
-        },
-        "Attributes to Ignore Regular Expression" : {
-          "displayName" : "Attributes to Ignore Regular Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Ignore Regular Expression",
-          "sensitive" : false
-        },
-        "Output Format" : {
-          "displayName" : "Output Format",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Output Format",
-          "sensitive" : false
-        },
-        "Log Payload" : {
-          "displayName" : "Log Payload",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log Payload",
-          "sensitive" : false
-        },
-        "Log Prefix" : {
-          "displayName" : "Log Prefix",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Log Prefix",
-          "sensitive" : false
-        },
-        "Character Set" : {
-          "displayName" : "Character Set",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Character Set",
-          "sensitive" : false
-        },
-        "Attributes to Log Regular Expression" : {
-          "displayName" : "Attributes to Log Regular Expression",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Attributes to Log Regular Expression",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 25,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.LogAttribute",
-      "yieldDuration" : "1 sec"
-    }, {
       "autoTerminatedRelationships" : [ "failure", "original" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -3025,6 +2708,401 @@
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.ConvertRecord",
       "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.7.2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "df6811c2-019b-1000-1804-7af87d5fe437",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "더존 자동전표데이터생성 구조로 변환",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -328.0,
+        "y" : 960.0
+      },
+      "properties" : {
+        "JSON Source" : "FLOW_FILE",
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[\n  {\n    \"operation\": \"shift\",\n    \"spec\": {\n      \"*\": {\n        \"coCd\": [\"coCd\", \"data[&1].inDivCd\"],\n        \"menuDt\": \"data[&1].menuDt\",\n        \"menuSq\": \"data[&1].menuSq\",\n        \"menu_LnSq\": \"data[&1].menuLnSq\",\n        \"drcrFg\": \"data[&1].drcrFg\",\n        \"acctCd\": \"data[&1].acctCd\",\n        \"trCd\": \"data[&1].trCd\",\n        \"trNm\": \"data[&1].trNm\",\n        \"acctAm\": \"data[&1].acctAm\",\n        \"rmkDc\": \"data[&1].rmkDc\",\n        \"docuTy\": \"data[&1].docuTy\"\n      }\n    }\n  },\n  {\n    \"operation\": \"cardinality\",\n    \"spec\": {\n      \"coCd\": \"ONE\"\n    }\n  }\n]"
+      },
+      "propertyDescriptors" : {
+        "JSON Source" : {
+          "displayName" : "JSON Source",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "JSON Source",
+          "sensitive" : false
+        },
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "JSON Source Attribute" : {
+          "displayName" : "JSON Source Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "JSON Source Attribute",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE", "TEXT" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure", "unmatched" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.7.2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "df73eeff-019b-1000-117a-3f490be0ec65",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "더존 JSON 필드 정의",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -336.0,
+        "y" : 64.0
+      },
+      "properties" : {
+        "Destination" : "flowfile-attribute",
+        "coCd" : "$.coCd",
+        "Max String Length" : "20 MB",
+        "Return Type" : "auto-detect",
+        "drcrFg" : "$.drcrFg",
+        "trCd" : "$.trCd",
+        "Null Value Representation" : "empty string",
+        "trNm" : "$.trNm",
+        "menuDt" : "$.menuDt",
+        "docuTy" : "$.docuTy",
+        "menu_LnSq" : "$.menu_LnSq",
+        "Path Not Found Behavior" : "ignore",
+        "acctCd" : "$.acctCd",
+        "rmkDc" : "$.rmkDc",
+        "acctAm" : "$.acctAm",
+        "inDivCd" : "$.coCd",
+        "menusq" : "$.menusq"
+      },
+      "propertyDescriptors" : {
+        "Destination" : {
+          "displayName" : "Destination",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Destination",
+          "sensitive" : false
+        },
+        "coCd" : {
+          "displayName" : "coCd",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "coCd",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Return Type" : {
+          "displayName" : "Return Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Return Type",
+          "sensitive" : false
+        },
+        "drcrFg" : {
+          "displayName" : "drcrFg",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "drcrFg",
+          "sensitive" : false
+        },
+        "trCd" : {
+          "displayName" : "trCd",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "trCd",
+          "sensitive" : false
+        },
+        "Null Value Representation" : {
+          "displayName" : "Null Value Representation",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Null Value Representation",
+          "sensitive" : false
+        },
+        "trNm" : {
+          "displayName" : "trNm",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "trNm",
+          "sensitive" : false
+        },
+        "menuDt" : {
+          "displayName" : "menuDt",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "menuDt",
+          "sensitive" : false
+        },
+        "docuTy" : {
+          "displayName" : "docuTy",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "docuTy",
+          "sensitive" : false
+        },
+        "menu_LnSq" : {
+          "displayName" : "menu_LnSq",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "menu_LnSq",
+          "sensitive" : false
+        },
+        "Path Not Found Behavior" : {
+          "displayName" : "Path Not Found Behavior",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Path Not Found Behavior",
+          "sensitive" : false
+        },
+        "acctCd" : {
+          "displayName" : "acctCd",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "acctCd",
+          "sensitive" : false
+        },
+        "rmkDc" : {
+          "displayName" : "rmkDc",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "rmkDc",
+          "sensitive" : false
+        },
+        "acctAm" : {
+          "displayName" : "acctAm",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "acctAm",
+          "sensitive" : false
+        },
+        "inDivCd" : {
+          "displayName" : "inDivCd",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "inDivCd",
+          "sensitive" : false
+        },
+        "menusq" : {
+          "displayName" : "menusq",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "menusq",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.7.2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "df747b3c-019b-1000-bfd5-526527342c77",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "LogAttribute",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 256.0,
+        "y" : 928.0
+      },
+      "properties" : {
+        "Log FlowFile Properties" : "true",
+        "Log Level" : "info",
+        "Attributes to Log" : "sql.query",
+        "Output Format" : "Line per Attribute",
+        "Log Payload" : "true",
+        "Character Set" : "UTF-8",
+        "Attributes to Log Regular Expression" : ".*"
+      },
+      "propertyDescriptors" : {
+        "Log FlowFile Properties" : {
+          "displayName" : "Log FlowFile Properties",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log FlowFile Properties",
+          "sensitive" : false
+        },
+        "Log Level" : {
+          "displayName" : "Log Level",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Level",
+          "sensitive" : false
+        },
+        "Attributes to Ignore" : {
+          "displayName" : "Attributes to Ignore",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Ignore",
+          "sensitive" : false
+        },
+        "Attributes to Log" : {
+          "displayName" : "Attributes to Log",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Log",
+          "sensitive" : false
+        },
+        "Attributes to Ignore Regular Expression" : {
+          "displayName" : "Attributes to Ignore Regular Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Ignore Regular Expression",
+          "sensitive" : false
+        },
+        "Output Format" : {
+          "displayName" : "Output Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Format",
+          "sensitive" : false
+        },
+        "Log Payload" : {
+          "displayName" : "Log Payload",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Payload",
+          "sensitive" : false
+        },
+        "Log Prefix" : {
+          "displayName" : "Log Prefix",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Log Prefix",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Attributes to Log Regular Expression" : {
+          "displayName" : "Attributes to Log Regular Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attributes to Log Regular Expression",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.LogAttribute",
+      "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
@@ -3036,6 +3114,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "-",
-    "timestamp" : 1768976235238
+    "timestamp" : 1768980794534
   }
 }
