@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1769394369796,
+    "description" : "",
+    "identifier" : "apache-nifi",
+    "lastModifiedTimestamp" : 1769394369796,
+    "name" : "apache-nifi",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
