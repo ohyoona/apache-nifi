@@ -5,7 +5,7 @@ echo "Updating dev branch..."
 git checkout dev
 git pull origin dev
 
-# 2. NiFi Process Group ID / dev URL
+# 2. NiFi Process Group ID / dev URL /
 NIFI_PG_ID="d4f982c8-019b-1000-1552-51aad59345a2"
 NIFI_URL="http://172.28.1.107:8787/nifi-api"
 
