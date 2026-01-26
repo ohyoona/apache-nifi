@@ -1087,6 +1087,61 @@
       "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
       "yieldDuration" : "1 sec"
     }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-stateful-analysis-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.7.2"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "ae216e4b-c6e3-37ed-b68f-617cee07a014",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "AttributeRollingWindow",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 120.0,
+        "y" : -528.0
+      },
+      "properties" : { },
+      "propertyDescriptors" : {
+        "Subwindow Length" : {
+          "displayName" : "Subwindow Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Subwindow Length",
+          "sensitive" : false
+        },
+        "Value to Track" : {
+          "displayName" : "Value to Track",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Value to Track",
+          "sensitive" : false
+        },
+        "Time Window" : {
+          "displayName" : "Time Window",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Window",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.stateful.analysis.AttributeRollingWindow",
+      "yieldDuration" : "1 sec"
+    }, {
       "autoTerminatedRelationships" : [ "failure" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
@@ -3084,63 +3139,6 @@
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
-        "artifact" : "nifi-standard-nar",
-        "group" : "org.apache.nifi",
-        "version" : "2.7.2"
-      },
-      "comments" : "",
-      "componentType" : "PROCESSOR",
-      "concurrentlySchedulableTaskCount" : 1,
-      "executionNode" : "ALL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "df32198f-019b-1000-a668-ba4295909e73",
-      "maxBackoffPeriod" : "10 mins",
-      "name" : "ConvertRecord",
-      "penaltyDuration" : "30 sec",
-      "position" : {
-        "x" : -1216.000022744546,
-        "y" : 259.9999995201624
-      },
-      "properties" : {
-        "Include Zero Record FlowFiles" : "true"
-      },
-      "propertyDescriptors" : {
-        "Include Zero Record FlowFiles" : {
-          "displayName" : "Include Zero Record FlowFiles",
-          "dynamic" : false,
-          "identifiesControllerService" : false,
-          "name" : "Include Zero Record FlowFiles",
-          "sensitive" : false
-        },
-        "Record Writer" : {
-          "displayName" : "Record Writer",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Record Writer",
-          "sensitive" : false
-        },
-        "Record Reader" : {
-          "displayName" : "Record Reader",
-          "dynamic" : false,
-          "identifiesControllerService" : true,
-          "name" : "Record Reader",
-          "sensitive" : false
-        }
-      },
-      "retriedRelationships" : [ ],
-      "retryCount" : 10,
-      "runDurationMillis" : 0,
-      "scheduledState" : "ENABLED",
-      "schedulingPeriod" : "0 sec",
-      "schedulingStrategy" : "TIMER_DRIVEN",
-      "style" : { },
-      "type" : "org.apache.nifi.processors.standard.ConvertRecord",
-      "yieldDuration" : "1 sec"
-    }, {
-      "autoTerminatedRelationships" : [ ],
-      "backoffMechanism" : "PENALIZE_FLOWFILE",
-      "bulletinLevel" : "WARN",
-      "bundle" : {
         "artifact" : "nifi-jolt-nar",
         "group" : "org.apache.nifi",
         "version" : "2.7.2"
@@ -3777,6 +3775,6 @@
   "parameterProviders" : { },
   "snapshotMetadata" : {
     "flowIdentifier" : "apache-nifi",
-    "timestamp" : 1769394370997
+    "timestamp" : 1769407412743
   }
 }
